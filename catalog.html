@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Главная</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/swipebox.min.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <script src="./js/jquery.min.js" defer></script>
+    <script src="./js/slick.min.js" defer></script>
+    <script src="./js/jquery.swipebox.min.js" defer></script>
+    <script src="./js/jquery.maskedinput.min.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div class="wrap">
+
+
+        <!-- header -->
+        <header class="header">
+            <div class="inner-wrap">
+                <div class="logo-wrap">
+                    <a href="" class="logo">
+                        <span class="logo-title">LOGO<span class="logo-subtitle">SITE</span></span>
+                    </a>
+                </div>
+                <div class="actions-wrap js-popup-wrap">
+                    <a href="" class="btn-popup-toggle btn-action-ico ico-menu js-btn-popup-toggle"></a>
+                    <div class="actions-popup-block js-popup-block">
+                        <div class="action-wrap">
+                            <a href="" class="btn button-border">Войти в аккаунт</a>
+                        </div>
+                        <div class="action-wrap">
+                            <a href="" class="btn">Создать анкету</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- page -->
+        <div class="page-full">
+
+            <!--filter-box-->
+            <div class="filter-box">
+                <div class="frm-row">
+                    <div class="frm-field field-select">
+                        <div class="frm-field-title">Хочу найти</div>
+                        <div class="field-inner-wrap">
+                            <div class="frm-select-button inp-main">
+                                <input type="radio" name="select" id="select-male">
+                                <label for="select-male">
+                                    <span class="lbl-ico">
+                                        <img src="./img/icons/male.svg" alt="">
+                                    </span>
+                                    <span class="lbl-title">Мужчина</span>
+                                </label>
+                            </div>
+                            <div class="frm-select-button inp-main">
+                                <input type="radio" name="select" id="select-female" checked>
+                                <label for="select-female">
+                                    <span class="lbl-ico">
+                                        <img src="./img/icons/female.svg" alt="">
+                                    </span>
+                                    <span class="lbl-title">Женщина</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-field field-main">
+                        <div class="frm-field-title">Цель знакомства</div>
+                        <select class="form-input inp-main">
+                            <option>Серьезные отношения</option>
+                            <option>Серьезные отношения</option>
+                            <option>Серьезные отношения</option>
+                            <option>Серьезные отношения</option>
+                            <option>Серьезные отношения</option>
+                            <option>Серьезные отношения</option>
+                        </select>
+                    </div>
+                    <div class="frm-field field-age">
+                        <div class="frm-field-title">Возраст</div>
+                        <div class="frm-field-range">
+                            <div class="field-range">
+                                <input type="text" class="form-input inp-main" placeholder="От">
+                            </div>
+                            <div class="field-range">
+                                <input type="text" class="form-input inp-main" placeholder="До">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-field field-second">
+                        <div class="frm-field-title">Город</div>
+                        <select class="form-input inp-main">
+                            <option>Санкт-Петербург</option>
+                            <option>Санкт-Петербург</option>
+                            <option>Санкт-Петербург</option>
+                            <option>Санкт-Петербург</option>
+                            <option>Санкт-Петербург</option>
+                            <option>Санкт-Петербург</option>
+                        </select>
+                    </div>
+                    <div class="frm-field field-button">
+                        <button type="submit" class="btn button-main">Найти</button>
+                    </div>
+                </div>
+            </div>
+            <!--/filter-box-->
+
+            <!--catalog-actions-box-->
+            <div class="catalog-actions-box">
+                <div class="action-wrap">
+                    <div class="action-title">Показывать:</div>
+                    <div class="action-field">
+                        <div class="frm-select-panel">
+                            <div class="frm-select-button-small">
+                                <input type="radio" name="toggle" id="toggle01" checked>
+                                <label for="toggle01">Все анкеты</label>
+                            </div>
+                            <div class="frm-select-button-small">
+                                <input type="radio" name="toggle" id="toggle02">
+                                <label for="toggle02">Кто Online</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-wrap">
+                    <div class="action-title">Всего анкет:</div>
+                    <div class="action-field">
+                        <div class="action-total">1236 </div>
+                    </div>
+                </div>
+            </div>
+            <!--/catalog-actions-box-->
+
+            <!--tiles-box-->
+            <div class="tiles-box">
+                <div class="items-wrap">
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/photo01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Екатерина</div>
+                                <div class="tile-info">26 лет</div>
+                                <a href="" class="tile-location">Санкт-Петербург</a>
+                            </div>
+                            <a href="" class="tile-link"></a>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/photo02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Екатерина</div>
+                                <div class="tile-info">26 лет</div>
+                                <a href="" class="tile-location">Санкт-Петербург</a>
+                            </div>
+                            <a href="" class="tile-link"></a>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/photo03.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Екатерина</div>
+                                <div class="tile-info">26 лет</div>
+                                <a href="" class="tile-location">Санкт-Петербург</a>
+                            </div>
+                            <a href="" class="tile-link"></a>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/photo04.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Екатерина</div>
+                                <div class="tile-info">26 лет</div>
+                                <a href="" class="tile-location">Санкт-Петербург</a>
+                            </div>
+                            <a href="" class="tile-link"></a>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/photo05.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Екатерина</div>
+                                <div class="tile-info">26 лет</div>
+                                <a href="" class="tile-location">Санкт-Петербург</a>
+                            </div>
+                            <a href="" class="tile-link"></a>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/photo06.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Екатерина</div>
+                                <div class="tile-info">26 лет</div>
+                                <a href="" class="tile-location">Санкт-Петербург</a>
+                            </div>
+                            <a href="" class="tile-link"></a>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/photo07.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Екатерина</div>
+                                <div class="tile-info">26 лет</div>
+                                <a href="" class="tile-location">Санкт-Петербург</a>
+                            </div>
+                            <a href="" class="tile-link"></a>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-catalog">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/photo08.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Екатерина</div>
+                                <div class="tile-info">26 лет</div>
+                                <a href="" class="tile-location">Санкт-Петербург</a>
+                            </div>
+                            <a href="" class="tile-link"></a>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                </div>
+            </div>
+            <!--/tiles-box-->
+
+        </div>
+        <!-- /page -->
+
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="inner-wrap">
+                333333
+            </div>
+        </footer>
+        <!-- /footer -->
+
+    </div>
+    <!-- /wrap -->
+
+
+
+</body>
+
+</html>

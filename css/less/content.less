@@ -1,3 +1,135 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.catalog-actions-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .action-title {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        color: var(--clr-vlight);
+        padding: 0 8px 0 0;
+        flex-shrink: 0;
+        height: 32px;
+        line-height: 32px;
+    }
+    .action-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-right: 30px;
+        flex-wrap: wrap;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    .action-total {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--clr-base);
+    }
+    .action-field {
+        flex-shrink: 0;
+    }
+}
+.filter-box {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: var(--radius-main);
+    box-shadow: var(--shadow-main);
+    position: relative;
+    padding: 3rem 3rem 1rem 3rem;
+    .frm-row {
+        margin: 0 -1.4rem;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .frm-field {
+        padding: 0 1.4rem;
+        margin-bottom: 2rem;
+        width: auto;
+        flex: 1;
+    }
+    .field-age {
+    }
+    .field-second {
+    }
+    .field-button {
+        flex: inherit;
+        flex-shrink: 0;
+        .btn {
+            width: 155px;
+        }
+    }
+    .field-second {
+        .form-input {
+            min-width: 220px;
+        }
+    }
+    .field-main {
+        .form-input {
+            min-width: 240px;
+        }
+    }
+    .field-inner-wrap {
+        display: flex;
+    }
+    .frm-field-range {
+        min-width: 170px;
+    }
+    .frm-select-button {
+        margin: 0 8px 0 0;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+}
+.tiles-box {
+    margin-bottom: 50px;
+    .item-wrap {
+        width: 25%;
+    }
+}
+@media (max-width: 767px) {
+    .filter-box {
+        .frm-field {
+            width: 50%;
+            flex: inherit;
+            flex-shrink: 0;
+        }
+        .field-button {
+            width: 100%;
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+    .tiles-box {
+        .item-wrap {
+            width: 33.33%;
+        }
+    }
+}
+@media (max-width: 639px) {
+    .filter-box {
+        .frm-field {
+            width: 100%;
+        }
+    }
+    .tiles-box {
+        .item-wrap {
+            width: 50%;
+        }
+    }
+}
+@media (max-width: 479px) {
+    .tiles-box {
+        .item-wrap {
+            width: 100%;
+        }
+    }
+}
