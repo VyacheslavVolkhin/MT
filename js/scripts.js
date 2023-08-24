@@ -143,13 +143,17 @@ popupElements.forEach(element => {
 })
 
 //input range
-let rangeSliders = document.querySelectorAll('.frm-field-range-slider')
+let rangeSliders = document.querySelectorAll('input[type="range"]')
 let rangeResult;
 for (i = 0;i < rangeSliders.length;i++) {
-	rangeSliders[i].querySelector('input').addEventListener('change', function(e) {
-		let rangeResult = this.value
+	rangeResult = rangeSliders[i].value
+	rangeSliders[i].parentNode.querySelector('.field-range-result').textContent = rangeResult
+	rangeSliders[i].addEventListener('change', function(e) {
+		rangeResult = this.value
+		this.parentNode.querySelector('.field-range-result').textContent = rangeResult
 	})
 }
+
 
 
 //btn tgl

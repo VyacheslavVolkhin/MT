@@ -2126,7 +2126,7 @@ select.form-input:required:invalid {
   margin-bottom: 4px;
 }
 .frm-field-range-slider .field-range-result[data-unit]:after {
-  content: attr(data-unit);
+  content: ' ' attr(data-unit);
 }
 .frm-row,
 .frm-field,
