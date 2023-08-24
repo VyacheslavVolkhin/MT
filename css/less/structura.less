@@ -63,6 +63,9 @@ html {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+    &.wrap-light {
+        background-color: #fff;
+    }
 	&>.cnt-section {
 		flex-shrink: 0;
 	}
@@ -232,6 +235,15 @@ html {
         text-transform: uppercase;
         color: var(--clr-att);
     }
+}
+.content-box {
+    margin-bottom: 20px;
+    border-radius: var(--radius-main);
+    box-shadow: var(--shadow-main);
+    background: #fff;
+    display: block;
+    position: relative;
+    padding: 24px 3rem;
 }
 .logo {
     display: block;

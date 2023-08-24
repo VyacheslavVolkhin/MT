@@ -1,6 +1,93 @@
 /* ----------------------------------- *\
 			inputs elements styles
 \* ----------------------------------- */
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 0;
+    width: 100%;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: var(--clr-vlight);
+    border-radius: 2px;
+    border: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--clr-att);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--clr-vlight);
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: var(--clr-vlight);
+    border-radius: 2px;
+    border: none;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--clr-att);
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 2px 0;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: var(--clr-vlight);
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+input[type=range]::-ms-fill-upper {
+    background: var(--clr-vlight);
+    border: 0.2px solid #010101;
+    border-radius: 2px;
+    box-shadow: none;
+}
+input[type=range]::-ms-thumb {
+    box-shadow: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--clr-att);
+    cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: var(--clr-vlight);
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: var(--clr-vlight);
+}
+
+
 .form-input[placeholder] {
     text-overflow: ellipsis;
 }
@@ -17,10 +104,16 @@
         padding: 0 9px;
         font-size: 14px;
     }
+    &.inp-medium {
+        height: 42px;
+    }
 }
 textarea.form-input {
     height: 153px;
     padding-top: 12px;
+    &.inp-medium {
+        height: 218px;
+    }
 }
 select.form-input {
     display: block;
@@ -86,6 +179,20 @@ select.form-input:required:invalid {
     font-weight: 500;
     color: #fff;
     filter: drop-shadow(0px 5px 20px rgba(51, 144, 236, 0.20));
+    &.button-att {
+        background-color: #FA5F7D;
+        border-color: #FA5F7D;
+        &:hover {
+            background-color: #FA5F7D+#222;
+            border-color: #FA5F7D+#222;
+        }
+        &.button-border {
+            &:not(:hover) {
+                background-color: transparent;
+                color: #FA5F7D;
+            }
+        }
+    }
     &.button-main {
         height: 36px;
         padding-top: 0;
@@ -116,6 +223,41 @@ select.form-input:required:invalid {
         &:first-child {
             margin-left: 0;
         }
+    }
+    .button-title {
+        &[data-title] {
+            &:before {
+                content: attr(data-title);
+            }
+        }
+    }
+    &.active {
+        .button-title {
+            &[data-title-active] {
+                &:before {
+                    content: attr(data-title-active);
+                }
+            }
+        }
+    }
+}
+.btn-action-icon {
+    display: inline-flex;
+    align-items: center;
+    .button-ico {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        margin: 0 4px 0 0;
+        &:last-child {
+            margin: 0 0 0 6px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &:hover {
+        color: var(--clr-att);
+        opacity: 0.8;
     }
 }
 .btn-action-ico {
@@ -170,13 +312,34 @@ select.form-input:required:invalid {
             box-shadow: none;
         }
     }
+    &.ico-del {
+        &:before {
+            background-image: url(../img/icons/cross.svg);
+            background-size: 24px auto;
+        }
+    }
+    &.ico-del-small {
+        &:before {
+            background-image: url(../img/icons/cross-small.svg);
+            background-size: 24px auto;
+        }
+    }
     &.ico-arrow {
         z-index: 20;
         cursor: pointer;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: fade(#fff, 20);
         &:before {
-            background-image: url(../img/icons/arrow-slider.png);
+            background-image: url(../img/icons/arrow-slider.svg);
+            opacity: 0.6;
         }
         &:hover {
+            background: fade(#fff, 20);
+            &:before {
+                opacity: 1;
+            }
         }
     }
     &.ico-arrow-prev {

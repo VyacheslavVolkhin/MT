@@ -1,6 +1,25 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-field-range-slider {
+    display: block;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    .field-range-result {
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        font-size: (16/18em);
+        font-weight: 500;
+        margin-bottom: 4px;
+        &[data-unit]:after {
+            content: attr(data-unit);
+        }
+    }
+    input[type="range"] {
+    }
+}
 .frm-row,
 .frm-field,
 .frm-row-submit {
