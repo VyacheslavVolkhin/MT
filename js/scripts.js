@@ -141,18 +141,43 @@ popupElements.forEach(element => {
 		}
 	}
 })
-
 //input range
-let rangeSliders = document.querySelectorAll('input[type="range"]')
-let rangeResult;
-for (i = 0;i < rangeSliders.length;i++) {
-	rangeResult = rangeSliders[i].value
-	rangeSliders[i].parentNode.querySelector('.field-range-result').textContent = rangeResult
-	rangeSliders[i].addEventListener('change', function(e) {
+const rangeInputs = document.querySelectorAll('input[type="range"]')
+for (i = 0; i < rangeInputs.length; i++) {
+	let target = rangeInputs[i]
+	const min = target.min
+	const max = target.max
+	const val = target.value
+	let percentage = (val - min) * 100 / (max - min)
+	target.style.backgroundSize = percentage + '% 100%'
+	rangeResult = rangeInputs[i].value
+	rangeInputs[i].parentNode.querySelector('.field-range-result').textContent = rangeResult
+	rangeInputs[i].addEventListener('change', function (e) {
 		rangeResult = this.value
 		this.parentNode.querySelector('.field-range-result').textContent = rangeResult
 	})
 }
+
+function handleInputChange(e) {
+	let target = e.target
+	const min = target.min
+	const max = target.max
+	const val = target.value
+	let percentage = (val - min) * 100 / (max - min)
+	target.style.backgroundSize = percentage + '% 100%'
+	for (i = 0; i < rangeInputs.length; i++) {
+		rangeResult = rangeInputs[i].value
+		rangeInputs[i].parentNode.querySelector('.field-range-result').textContent = rangeResult
+		rangeInputs[i].addEventListener('change', function (e) {
+			rangeResult = this.value
+			this.parentNode.querySelector('.field-range-result').textContent = rangeResult
+		})
+	}
+}
+
+rangeInputs.forEach(input => {
+	input.addEventListener('input', handleInputChange)
+})
 
 
 
