@@ -82,6 +82,21 @@
     text-decoration: none;
     line-height: 1;
     //transform: translateZ(0);
+    .btn-action-ico {
+        &.ico-del {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+            border-radius: 50%;
+            background-color: fade(#fff, 20);
+            &:hover {
+                background-color: fade(#fff, 40);
+            }
+        }
+    }
     &.photo-add-button {
         border: 1px solid var(--clr-border);
         cursor: pointer;

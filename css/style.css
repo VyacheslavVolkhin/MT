@@ -695,6 +695,21 @@ body {
   text-decoration: none;
   line-height: 1;
 }
+.elm-photo .btn-action-ico.ico-del,
+.tile-photo .btn-action-ico.ico-del {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.elm-photo .btn-action-ico.ico-del:hover,
+.tile-photo .btn-action-ico.ico-del:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
 .elm-photo.photo-add-button,
 .tile-photo.photo-add-button {
   border: 1px solid var(--clr-border);
@@ -1026,6 +1041,10 @@ body {
   padding-right: 8px;
   padding-right: 0.8rem;
   width: 33.33%;
+}
+.form-login-box .row-center {
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .form-login-box .row-slider {
   padding-left: 15px;
